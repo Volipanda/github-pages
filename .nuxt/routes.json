@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/home/tsuyoshi/Documentos/Testes/volipanda.github.io/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_4682b7a0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/tsuyoshi/Documentos/Testes/volipanda.github.io/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3d1975a8"
+  }
+]
