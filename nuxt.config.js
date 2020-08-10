@@ -13,7 +13,7 @@ export default {
   target: 'static',
   router: {
       base:'/top-english/'
-  }
+  },
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
