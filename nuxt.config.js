@@ -12,7 +12,7 @@ export default {
   */
   target: 'static',
   router: {
-      base:'/top-english/'
+      base:'/github-pages/'
   },
   /*
   ** Headers of the page

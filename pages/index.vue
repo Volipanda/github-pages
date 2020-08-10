@@ -10,10 +10,10 @@
       md6
     >
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
       </div>
-      <v-card>
+      <v-card
+        flat
+        >
         <v-card-title class="headline">
           Welcome to the Vuetify + Nuxt.js template
         </v-card-title>
@@ -89,9 +89,17 @@ import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
+  data() {
+    return {
+
+    };
+  },
   components: {
     Logo,
     VuetifyLogo
+  },
+  mounted() {
+
   }
 }
 </script>
