@@ -12,7 +12,7 @@ export default {
   */
   target: 'static',
   router: {
-      base:'top-english'
+      base:'/top-english/'
   }
   /*
   ** Headers of the page
