@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\|Material+Icons");
 @import url("https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 $material-light: (
   'background': #fff
@@ -14,6 +15,10 @@ $material-light: (
     font-weight: 700;
     font-size: xx-large;
     margin-top: 200px;
+}
+
+.font {
+    font-family:  'Roboto', sans-serif;
 }
 
 .mainImgDiv {

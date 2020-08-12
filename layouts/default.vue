@@ -6,31 +6,22 @@
       class="mainImg"
       >
       <div class="mainImgDiv">
-        <span class="textContent">
-            {{ textInfo.centerInformation }}
-        </span><br/>
-        <span class="textContent"> #TOPENGLISH </span>
-      </div>   
-      <!-- <v-card
-        class="topEnglish"
-        raised
-        max-width="350px"
-        color="red"
-        >
+        <vue-typed-js 
+          class="textContent mx-auto"
+          
+          :strings="[textInfo.centerInformation]">
+          <h4 class="typing font"
+            style="text-align:center;"
+            ></h4>  
+        </vue-typed-js>
+        <vue-typed-js
+          :strings="['Welcome to #TopEnglish']"
+          >
+          <h4 class="typing font"></h4>
+        </vue-typed-js>
+        <br/>
         
-        <v-img
-            src="https://blog.topenglish.com.br/wp-content/uploads/2017/06/LOGO-20-ANOSnew.png"
-            ></v-img>
-        <v-card-title>
-            {{ textInfo.welcome }}
-        </v-card-title>
-        <v-card-subtitle>
-            {{ textInfo.weAreTopenglish }}
-        </v-card-subtitle>
-        <v-card-text>
-            {{ textInfo.schoolDescription }}
-        </v-card-text>
-      </v-card> -->
+      </div>         
       <div style="margin-top:350px;">                        
         <v-btn 
           icon
@@ -111,6 +102,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueTypedJs from 'vue-typed-js'
+Vue.use(VueTypedJs)
 
 export default {
   data () {
@@ -148,12 +142,15 @@ export default {
       var div = document.getElementById('formCard');
       div.scrollIntoView({behavior: 'smooth'});
       return false;
+    },
+    typeWriterEffect() {
+      
     }
   },
   components:{
   },
   mounted() {
-     
+    this.typeWriterEffect();
   }
 }
 </script>

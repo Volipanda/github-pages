@@ -21,8 +21,6 @@
                 </v-img>
                 <br/>
                 <br/>
-                <br/>
-                <span>{{ textInfo.welcome }}</span>
                 <v-spacer/>
                 {{ textInfo.weAreTopenglish }}
                 <v-spacer/>
@@ -62,7 +60,7 @@
           <v-divider/>
           <v-row>
             <v-col>              
-              DIFERENCIAIS                
+              <b> NOSSOS DIFERENCIAIS </b>
                 <v-row>
                   <v-col>
                         <v-icon
@@ -95,8 +93,11 @@
                   <v-icon>attach_money</v-icon>
                   <span>MENSALIDADE</span> 
                 </v-card-title>
+                <v-spacer/>
                 <v-card-subtitle>
-                  <b>PROMOÇÃO IMPERDÍVEL</b> <br/>
+                  <h2 style="color:red"> 
+                    <b>PROMOÇÃO IMPERDÍVEL</b>
+                  </h2> <br/>
                   <b>APENAS R$ 600,00 EM 24 X </b>
                 </v-card-subtitle>              
               </v-card>
@@ -157,7 +158,7 @@ export default {
         schoolDescription: 'Uma empresa com mais de 20 anos de experiência no mercado. Cuidamos de você em qualquer lugar do mundo',
         courseDescription: 'Oferecemos curso completo de 2 anos, focado 100% em conversação que vai garantir a sua fluência e o seu aprendizado.',
         metodology: 'Graças à nossa metodologia própria, a conversação ocorre desde a primeira aula, onde nossos alunos aprendem a construir frases logo de início.',
-        flexibility: 'Na Top English também é o aluno que define os dias e horários de aulas. podendo assim escolher o que melhor se ajustar à sua agenda. Além disso, com flexibilidade para poder desmarcar e reagendar aulas que porventura precisem ser desmarcadas.',
+        flexibility: 'Na Top English, o horário das aulas é flexibilizado para a comodidade dos nossos alunos, sendo eles que definem os dias e os horários das aulas para o que melhor se ajustar à sua agenda. Com a possibilidade de desmarcar e reagedar porventura quando precisem ser remarcadas',
         diferential: 'Os diferenciais do nosso curso são a garantia da sua fluência em inglês.',
         obsIntercourse: 'O intercâmbio não será cobrado pelas aulas.',
         obsStudent: 'O aluno pagará somente a passagem, hospedagem e refeições.',

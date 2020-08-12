@@ -10,7 +10,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "nuxt": "^2.14.1"
+    "nuxt": "^2.14.1",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",
