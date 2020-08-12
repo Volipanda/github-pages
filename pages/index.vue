@@ -15,7 +15,7 @@
             <v-col>              
                 <v-img 
                   class="mx-auto"
-                  src="https://blog.topenglish.com.br/wp-content/uploads/2017/06/LOGO-20-ANOSnew.png"
+                  :src="require('static/image/LOGO-20-ANOSnew.png')"
                   width="500px"
                   >
                 </v-img>
@@ -109,7 +109,7 @@
                 <v-card-subtitle>
                   PARA MAIORES INFORMAÇÕES:
                 </v-card-subtitle>
-                <v-content style="padding: 10px">
+                <v-main style="padding: 10px">
                   <v-form>
                     <v-text-field
                       label="Nome"
@@ -132,7 +132,7 @@
 
                     <v-btn class="mr-4" >Enviar</v-btn>
                   </v-form>
-                </v-content>
+                </v-main>
               </v-card>
             </v-col>
           </v-row>

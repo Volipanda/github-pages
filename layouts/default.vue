@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-img 
-      src="https://cdn.centennialcollege.ca/widencdn/img/centennialcollege/bxj23teyc9/1440x710px/International_Students_Flag.jpeg?keep=c&crop=yes&quality=100&u=gxypq6"
+      :src="require('static/image/International_Students_Flag.jpeg')"
       gradient="to top right, rgba(100,115,101,.33), rgba(25,32,72,.7)"
       class="mainImg"
       >
