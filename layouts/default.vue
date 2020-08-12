@@ -1,5 +1,45 @@
 <template>
-  <v-app dark>    
+  <v-app>
+    <v-img 
+      src="https://cdn.centennialcollege.ca/widencdn/img/centennialcollege/bxj23teyc9/1440x710px/International_Students_Flag.jpeg?keep=c&crop=yes&quality=100&u=gxypq6"
+      gradient="to top right, rgba(100,115,101,.33), rgba(25,32,72,.7)"
+      class="mainImg"
+      >
+      <div class="mainImgDiv">
+        <span class="textContent">
+            {{ textInfo.centerInformation }}
+        </span><br/>
+        <span class="textContent"> #TOPENGLISH </span>
+      </div>   
+      <!-- <v-card
+        class="topEnglish"
+        raised
+        max-width="350px"
+        color="red"
+        >
+        
+        <v-img
+            src="https://blog.topenglish.com.br/wp-content/uploads/2017/06/LOGO-20-ANOSnew.png"
+            ></v-img>
+        <v-card-title>
+            {{ textInfo.welcome }}
+        </v-card-title>
+        <v-card-subtitle>
+            {{ textInfo.weAreTopenglish }}
+        </v-card-subtitle>
+        <v-card-text>
+            {{ textInfo.schoolDescription }}
+        </v-card-text>
+      </v-card> -->
+      <div style="margin-top:350px;">                        
+        <v-btn 
+          icon
+          x-large
+          >
+          <v-icon>keyboard_arrow_down</v-icon>
+        </v-btn>
+      </div>       
+    </v-img>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -53,41 +93,35 @@
     </v-app-bar>
     <v-main>
       <v-container>
+        
         <nuxt />
+        <v-divider/>
+        <inpire/>
       </v-container>
-    </v-main>
-    <!--
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
+    </v-main>    
     <v-footer
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() + ' ' + textInfo.obsContact }} </span>      
     </v-footer> 
     
   </v-app>
 </template>
 
 <script>
+import inspire from '@/pages/inspire.vue'
+
 export default {
   data () {
-    return {
+    return {      
+      textInfo: {  
+        centerInformation: 'APRENDER INGLÊS E GARANTIR UM INTERCÂMBIO EM UM SÓ LUGAR.',  
+        welcome: 'We are Top English!',
+        weAreTopenglish: '',
+        schoolDescription: 'Uma empresa com mais de 20 anos de experiência no mercado. Cuidamos de você em qualquer lugar do mundo',        
+        obsContact: ' Dúvidas ou para maiores informações, entre em contato!'    
+      },      
       clipped: false,
       drawer: false,
       fixed: false,
@@ -108,10 +142,15 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  components:{
+    inspire: inspire
   }
 }
 </script>
 <style>
+@import 'assets/variables.scss';
+
 @media(min-width: 1281px) {
   .responsive{
     display: none;

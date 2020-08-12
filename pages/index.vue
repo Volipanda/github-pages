@@ -9,94 +9,161 @@
       sm8
       md6
     >
-      <div class="text-center">
-      </div>
-      <v-card
-        flat
-        >
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <v-main class="text-center">   
+        <v-container fluid>
+          <v-row dense>
+            <v-col>              
+                <v-img 
+                  class="mx-auto"
+                  src="https://blog.topenglish.com.br/wp-content/uploads/2017/06/LOGO-20-ANOSnew.png"
+                  width="500px"
+                  >
+                </v-img>
+                <br/>
+                <br/>
+                <br/>
+                <span>{{ textInfo.welcome }}</span>
+                <v-spacer/>
+                {{ textInfo.weAreTopenglish }}
+                <v-spacer/>
+                {{ textInfo.schoolDescription }}
+            </v-col>
+          </v-row>
+          <br/>
+          <v-row dense>
+            <v-col>                                                      
+                <v-icon
+                    
+                    x-large
+                >help_outline</v-icon>
+                <span> SOBRE O CURSO</span>              
+                <v-spacer></v-spacer>              
+                <b> {{ textInfo.courseDescription }} </b>                          
+            </v-col>
+            <v-col>
+              
+                  <v-icon
+                    x-large 
+                    >menu_book</v-icon>
+                    <span>METODOLOGIA</span>
+                <v-spacer></v-spacer>                
+                    <b> {{ textInfo.metodology }} </b>
+            </v-col>
+            <v-col>
+              
+                  <v-icon
+                    x-large
+                    >repeat</v-icon>
+                    <span>FLEXIBILIDADE</span>
+                <v-spacer></v-spacer>                
+                    <b> {{ textInfo.flexibility }} </b>
+            </v-col>
+          </v-row>
+          <v-divider/>
+          <v-row>
+            <v-col>              
+              DIFERENCIAIS                
+                <v-row>
+                  <v-col>
+                        <v-icon
+                          x-large>done_outline</v-icon>
+                          <span>GARANTIA</span>
+                          <v-spacer/>
+                        <b> {{ textInfo.diferential }} </b>
+                  </v-col>
+                  <v-col>
+                        <v-icon
+                          x-large>airplanemode_active</v-icon>
+                          <span>INTERCÂMBIO</span>
+                          <v-spacer/>
+                        <b>
+                        1- {{ textInfo.obsIntercourse }} <br/>
+                        2- {{ textInfo.obsStudent }}
+                        </b>
+                  </v-col>
+                </v-row>
+              </v-card>                           
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>            
+              <v-card
+                class="mx-auto"
+                max-width="350px">
+                
+                <v-card-title>
+                  <v-icon>attach_money</v-icon>
+                  <span>MENSALIDADE</span> 
+                </v-card-title>
+                <v-card-subtitle>
+                  <b>PROMOÇÃO IMPERDÍVEL</b> <br/>
+                  <b>APENAS R$ 600,00 EM 24 X </b>
+                </v-card-subtitle>              
+              </v-card>
+            </v-col>
+            <v-col>
+              <v-card
+                class="mx-auto"
+                max-width="350px"
+                >
+                <v-card-subtitle>
+                  PARA MAIORES INFORMAÇÕES:
+                </v-card-subtitle>
+                <v-content style="padding: 10px">
+                  <v-form>
+                    <v-text-field
+                      label="Nome"
+                      required
+                      ></v-text-field>
+                    <v-text-field
+                      label="E-mail"
+                      required
+                      ></v-text-field>
+                    <v-text-field
+                      label="Whatsapp"
+                      required
+                      ></v-text-field>
+                      <v-checkbox
+                        value="0"
+                        label="Eu concordo"
+                        type="checkbox"
+                        required
+                        ></v-checkbox>
+
+                    <v-btn class="mr-4" >Enviar</v-btn>
+                  </v-form>
+                </v-content>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>                  
+      </v-main>      
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   data() {
     return {
-
+      show: false,
+      textInfo: {        
+        welcome: 'We are Top English!',
+        weAreTopenglish: '',
+        schoolDescription: 'Uma empresa com mais de 20 anos de experiência no mercado. Cuidamos de você em qualquer lugar do mundo',
+        courseDescription: 'Oferecemos curso completo de 2 anos, focado 100% em conversação que vai garantir a sua fluência e o seu aprendizado.',
+        metodology: 'Graças à nossa metodologia própria, a conversação ocorre desde a primeira aula, onde nossos alunos aprendem a construir frases logo de início.',
+        flexibility: 'Na Top English também é o aluno que define os dias e horários de aulas. podendo assim escolher o que melhor se ajustar à sua agenda. Além disso, com flexibilidade para poder desmarcar e reagendar aulas que porventura precisem ser desmarcadas.',
+        diferential: 'Os diferenciais do nosso curso são a garantia da sua fluência em inglês.',
+        obsIntercourse: 'O intercâmbio não será cobrado pelas aulas.',
+        obsStudent: 'O aluno pagará somente a passagem, hospedagem e refeições.',
+        obsPrice: 'R$ 600,00 em 24 x'        
+      }  
     };
   },
   components: {
-    Logo,
-    VuetifyLogo
+
   },
   mounted() {
 

@@ -1,4 +1,49 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\|Material+Icons");
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css");
+
+$material-light: (
+  'background': #fff
+);
+
+.mainHeader {
+    text-align: center;
+}
+
+.textContent {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: xx-large;
+    margin-top: 200px;
+}
+
+.mainImgDiv {
+    margin-top: 100px;
+}
+
+.mainImg {    
+  height:100vh;
+  text-align: center;
+}
+
+@media(min-width:1281px){
+  .topEnglish {
+    color: red;
+    padding: 15px;
+  }
+
+}
+
+@media(max-width:768px){
+    .textContent {
+        font-size: large;
+        font-family: "Open Sans";
+    }
+
+    .mobileTopEnglish {
+        display: block;
+    }
+    
+    .topEnglish {
+        display: none;
+    }
+}
