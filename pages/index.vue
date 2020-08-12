@@ -105,6 +105,7 @@
               <v-card
                 class="mx-auto"
                 max-width="350px"
+                id="formCard"
                 >
                 <v-card-subtitle>
                   PARA MAIORES INFORMAÇÕES:
@@ -121,6 +122,7 @@
                       ></v-text-field>
                     <v-text-field
                       label="Whatsapp"
+                      mask="(##) #####-####"
                       required
                       ></v-text-field>
                       <v-checkbox
@@ -130,7 +132,8 @@
                         required
                         ></v-checkbox>
 
-                    <v-btn class="mr-4" >Enviar</v-btn>
+                    <v-btn 
+                      class="mr-4" >Enviar</v-btn>
                   </v-form>
                 </v-main>
               </v-card>
@@ -162,8 +165,8 @@ export default {
       }  
     };
   },
-  components: {
-
+  methods: {    
+     
   },
   mounted() {
 

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app>    
     <v-img 
       :src="require('static/image/International_Students_Flag.jpeg')"
       gradient="to top right, rgba(100,115,101,.33), rgba(25,32,72,.7)"
@@ -35,6 +35,7 @@
         <v-btn 
           icon
           x-large
+          @click="focusInfo"
           >
           <v-icon>keyboard_arrow_down</v-icon>
         </v-btn>
@@ -110,7 +111,6 @@
 </template>
 
 <script>
-import inspire from '@/pages/inspire.vue'
 
 export default {
   data () {
@@ -131,20 +131,29 @@ export default {
           title: 'Welcome',
           to: '/'
         },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
+        // {
+        //   icon: 'mdi-chart-bubble',
+        //   title: 'Inspire',
+        //   to: '/inspire'
+        // }
       ],
       miniVariant: false,
       right: false,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Vuetify.js',
+    }
+  },
+  methods: {
+    focusInfo() {
+      var div = document.getElementById('formCard');
+      div.scrollIntoView({behavior: 'smooth'});
+      return false;
     }
   },
   components:{
-    inspire: inspire
+  },
+  mounted() {
+     
   }
 }
 </script>
@@ -162,5 +171,5 @@ export default {
     display: block;
   }
 }
-
+ 
 </style>
